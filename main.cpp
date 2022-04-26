@@ -1,10 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
+#include<cmath>
 using namespace std;
+#define CUBE(x) (x*x*x)
 
 int main()
  {
-    cout<<"####################### This is C++ problem solving ###################"<<endl;
+    cout << "Hello world!" << endl;
+        cout<<"####################### This is C++ problem solving ###################"<<endl;
     int user_input;
     cout << "Enter a positive number no greater than 15"<<endl;
     cin >> user_input;
@@ -97,5 +100,49 @@ int main()
     }
 
     cout << "\n";
+
+
+    // power of a number
+    int x,n,result;
+    cout << "Enter number X: " << endl;
+    cin >> x;
+    cout << "Enter n: " << endl;
+    cin >> n;
+    result = pow(x,n);
+    cout << "The result is: " << result << endl;
+
+
+    // cube numbers
+    int k;
+    cout << "Enter any positive number: ";
+    cin >> k;
+    cout << "The cube number is: " << CUBE(k) << endl;
+
+
+    // checking odd - even
+    if(k%2==0){
+        cout << "The entered number is even number." <<endl;
+    }
+    else{
+        cout << "The entered number is odd number." << endl;
+    }
+
+
+    // checking prime
+    int p;
+    if (k==1){
+        cout << "Prime number starts from 2." << endl;
+    }
+    for(p=2;p<k;p++){
+        if(k%p==0){
+            cout << "The entered number is not prime number" << endl;
+            break;
+        }
+    }
+    if (k==p){
+        cout << "The entered number is prime number" << endl;
+    }
+
     return 0;
+
 }
